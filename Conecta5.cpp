@@ -68,7 +68,7 @@ int main()
 				printf("columna = ");
 				scanf("%d", &column);
 			}
-		}while(pieces[file][column] != 0);
+		}while(pieces[file - 1][column - 1] != 0);
 
 
 		pieces[file - 1][column - 1] = 2; // save the user pivot
@@ -89,7 +89,7 @@ int main()
 		
 
 		//IMPLEMENTATION OF THE GENETIC ALGORITHM
-		for(int j = 0; j < 15; j++) //It does 15 iterations
+		for(int j = 0; j < 100; j++) //It does 15 iterations
 		{
 			for(int i = 0; i < 10; i += 2) // start the genetic algorithm
 			{
